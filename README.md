@@ -135,6 +135,23 @@ src/
 - `npm run lint`: Run ESLint
 - `npm run type-check`: Run TypeScript type checking
 
+## Deployment
+
+This project can be deployed to various platforms. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+
+### Quick Deploy Options:
+
+**Vercel (Recommended for Next.js):**
+```bash
+npm i -g vercel
+vercel
+```
+
+**Netlify:**
+- Connect your repository to Netlify
+- Set environment variables in Netlify dashboard
+- Deploy using the provided `netlify.toml` configuration
+
 ### Database Commands
 
 - `npx prisma studio`: Open Prisma Studio (database GUI)
