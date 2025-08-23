@@ -26,7 +26,7 @@ Turn what you already do into a simple timeline - music, runs, commits, films. Y
 ### Prerequisites
 
 - Node.js 18+ 
-- PostgreSQL database (local or Supabase)
+- Supabase account and database
 - Google OAuth credentials (optional)
 - Apple OAuth credentials (optional)
 - SMTP server for email magic links (optional)
@@ -47,7 +47,7 @@ Turn what you already do into a simple timeline - music, runs, commits, films. Y
    
    Fill in your environment variables:
    ```env
-   DATABASE_URL="postgresql://username:password@localhost:5432/personal_activity_aggregator"
+   DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.ccnbsiakbaqunmpopibv.supabase.co:5432/postgres"
    NEXTAUTH_URL=http://localhost:3000
    NEXTAUTH_SECRET=your-secret-key-here
    GOOGLE_CLIENT_ID=your-google-client-id
@@ -57,6 +57,8 @@ Turn what you already do into a simple timeline - music, runs, commits, films. Y
    EMAIL_SERVER=smtp://user:pass@smtp.example.com:587
    EMAIL_FROM=hello@your.app
    ```
+   
+   **Important:** Replace `[YOUR-PASSWORD]` with your actual Supabase database password.
 
 3. **Set up the database**
    ```bash
