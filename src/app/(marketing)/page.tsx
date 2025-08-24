@@ -147,7 +147,14 @@ export default function LandingPage() {
           </div>
 
           <p className="text-xs text-muted-foreground text-center mt-6">
-            By continuing, you agree to our terms and privacy policy
+            By continuing, you agree to our{' '}
+            <a href="/terms" className="underline hover:text-foreground transition-colors">
+              terms of service
+            </a>{' '}
+            and{' '}
+            <a href="/privacy" className="underline hover:text-foreground transition-colors">
+              privacy policy
+            </a>
           </p>
         </div>
       </div>

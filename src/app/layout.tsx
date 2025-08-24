@@ -20,6 +20,23 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextAuthProvider>
           {children}
+          <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div className="container mx-auto px-4 py-6">
+              <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+                <div className="mb-4 md:mb-0">
+                  © {new Date().getFullYear()} Habit Streaks. All rights reserved.
+                </div>
+                <div className="flex space-x-6">
+                  <a href="/terms" className="hover:text-foreground transition-colors">
+                    Terms of Service
+                  </a>
+                  <a href="/privacy" className="hover:text-foreground transition-colors">
+                    Privacy Policy
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
         </NextAuthProvider>
       </body>
     </html>
