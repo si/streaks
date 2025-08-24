@@ -1,14 +1,15 @@
-# Personal Activity Aggregator
+# Habit Streaks
 
-Turn what you already do into a simple timeline - music, runs, commits, films. Your data stays private. You decide what to share.
+Build lasting habits by tracking your daily activities and maintaining beautiful streak visualizations. From fitness to learning, see your progress and stay motivated to achieve your goals.
 
 ## Features
 
-- **Multi-provider integration**: Spotify, Strava, GitHub, Letterboxd, Goodreads, Swarm, RSS, ActivityPub
-- **Smart recommendations**: Services are recommended based on your chosen goal
+- **Habit tracking**: Build and maintain streaks for fitness, learning, creativity, and wellness
+- **Multi-provider integration**: Strava, GitHub, and other activity providers
+- **Smart recommendations**: Services are recommended based on your chosen habit goals
 - **Privacy-first**: Your data stays private; you control what to share
 - **Mobile-first design**: Beautiful, responsive UI that works on all devices
-- **UK English copy**: Friendly, warm tone without guilt language
+- **Streak visualizations**: Beautiful charts and progress tracking to keep you motivated
 
 ## Tech Stack
 
@@ -101,16 +102,16 @@ src/
 ## Onboarding Flow
 
 1. **Registration**: Google/Apple OAuth or email magic link
-2. **Goal Selection**: Choose primary goal category (Fitness, Creativity, Entertainment, Productivity, Life & Social)
+2. **Habit Goal Selection**: Choose primary habit category (Fitness, Learning, Creativity, Wellness)
 3. **Service Connection**: View recommended services and optionally connect providers
 4. **Backfill Period**: Select how far back to look for data (This year, Last 30 days, All time)
-5. **Preview**: See mock timeline and proceed to main app
+5. **Preview**: See your streak dashboard and start building habits
 
 ## Database Schema
 
 ### Core Models
 - `User`: User accounts and profiles
-- `UserPreference`: User goals and settings
+- `UserPreference`: User habit goals and settings
 - `UserConnection`: Connected service accounts
 - `OnboardingState`: Onboarding progress tracking
 
@@ -121,7 +122,7 @@ src/
 
 ## API Endpoints
 
-- `POST /api/onboarding/goal`: Save user goal and preferences
+- `POST /api/onboarding/goal`: Save user habit goal and preferences
 - `POST /api/onboarding/backfill`: Save backfill period selection
 - `GET/POST /api/auth/[...nextauth]`: NextAuth authentication routes
 

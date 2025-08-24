@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Personal Activity Aggregator",
-  description: "Turn what you already do into a simple timeline - music, runs, commits, films.",
+  title: "Habit Streaks",
+  description: "Build lasting habits by tracking your daily activities - fitness, learning, creativity, and more.",
 };
 
 export default function RootLayout({

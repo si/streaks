@@ -24,11 +24,11 @@ export default function LandingPage() {
       <div className="container mx-auto max-w-4xl px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Turn what you already do into a simple timeline
+            Build lasting habits with Habit Streaks
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Music, runs, commits, films - see everything you do in one beautiful timeline. 
-            Your data stays private. You decide what to share.
+            Track your daily activities and build momentum with beautiful streak visualizations. 
+            From fitness to learning, see your progress and stay motivated.
           </p>
         </div>
 
@@ -36,13 +36,13 @@ export default function LandingPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <span>🎧</span>
-                <span>Music</span>
+                <span>🔥</span>
+                <span>Fitness Streaks</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Track your listening history from Spotify and see your musical journey
+                Build consistent workout habits with Strava integration and streak tracking
               </p>
             </CardContent>
           </Card>
@@ -50,13 +50,13 @@ export default function LandingPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <span>🏃</span>
-                <span>Fitness</span>
+                <span>📚</span>
+                <span>Learning</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Monitor your workouts, runs, and physical activities from Strava
+                Track your daily learning activities, coding sessions, and skill development
               </p>
             </CardContent>
           </Card>
@@ -64,13 +64,13 @@ export default function LandingPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <span>💻</span>
-                <span>Code</span>
+                <span>🎨</span>
+                <span>Creativity</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                See your coding activity and project contributions from GitHub
+                Monitor your creative projects, writing, and artistic pursuits
               </p>
             </CardContent>
           </Card>
@@ -78,13 +78,13 @@ export default function LandingPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <span>🎬</span>
-                <span>Films</span>
+                <span>🧘</span>
+                <span>Wellness</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Keep track of your film watching history and reviews
+                Track meditation, reading, and other wellness activities for a balanced life
               </p>
             </CardContent>
           </Card>
@@ -92,9 +92,9 @@ export default function LandingPage() {
 
         <div className="max-w-md mx-auto">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-semibold mb-2">Get started</h2>
+            <h2 className="text-2xl font-semibold mb-2">Start your streak journey</h2>
             <p className="text-muted-foreground">
-              Choose your preferred sign-in method
+              Join thousands building better habits every day
             </p>
           </div>
 
