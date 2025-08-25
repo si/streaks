@@ -99,7 +99,8 @@ export default function LandingPage() {
           </div>
 
           <div className="space-y-4">
-            <Button 
+            {/* Uncomment these when OAuth is configured */}
+            {/* <Button 
               onClick={() => signIn('google', { callbackUrl: '/onboarding' })}
               className="w-full"
               size="lg"
@@ -125,7 +126,7 @@ export default function LandingPage() {
                   Or continue with email
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <form onSubmit={handleEmailSignIn} className="space-y-4">
               <Input
