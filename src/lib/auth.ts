@@ -3,6 +3,7 @@ import { PrismaAdapter } from '@auth/prisma-adapter'
 import GoogleProvider from 'next-auth/providers/google'
 import AppleProvider from 'next-auth/providers/apple'
 import EmailProvider from 'next-auth/providers/email'
+import GitHubProvider from 'next-auth/providers/github'
 import { prisma } from './prisma'
 
 export const authOptions: NextAuthOptions = {
@@ -15,6 +16,10 @@ export const authOptions: NextAuthOptions = {
     AppleProvider({
       clientId: process.env.APPLE_ID!,
       clientSecret: process.env.APPLE_SECRET!,
+    }),
+    GitHubProvider({
+      clientId: process.env.GITHUB_CLIENT_ID!,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     }),
     EmailProvider({
       server: process.env.EMAIL_SERVER,

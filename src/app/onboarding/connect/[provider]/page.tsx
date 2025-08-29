@@ -46,9 +46,9 @@ export default function ConnectPage({ params }: ConnectPageProps) {
       <div className="text-center space-y-2">
         <h2 className="text-xl font-semibold">Connect {provider.name}</h2>
         <p className="text-muted-foreground">
-          {provider.oauthSupported 
-            ? 'We'll securely connect to your account'
-            : 'We'll hook this up later - for now, let's continue'
+          {provider.oauthSupported
+            ? "We'll securely connect to your account"
+            : "We'll hook this up later - for now, let's continue"
           }
         </p>
       </div>

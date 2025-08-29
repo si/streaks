@@ -76,6 +76,7 @@ model User {
   preferences   UserPreference?
   connections   UserConnection[]
   onboarding    OnboardingState?
+  githubActivities GitHubActivity[]
 }
 
 model VerificationToken {
@@ -116,6 +117,23 @@ model UserConnection {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, providerId, externalUserId])
+}
+
+model GitHubActivity {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  repo      String
+  message   String
+  url       String
+  timestamp DateTime
+  status    String?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, url])
+  @@index([userId, timestamp])
 }
 
 model OnboardingState {
