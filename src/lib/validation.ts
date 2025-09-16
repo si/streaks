@@ -11,5 +11,8 @@ export const backfillSchema = z.object({
   lookbackPeriod: z.nativeEnum(LookbackPeriod),
 })
 
-export type GoalFormData = z.infer<typeof goalSchema>
-export type BackfillFormData = z.infer<typeof backfillSchema>
+export type GoalFormInput = z.input<typeof goalSchema>
+export type GoalFormData = z.output<typeof goalSchema>
+
+export type BackfillFormInput = z.input<typeof backfillSchema>
+export type BackfillFormData = z.output<typeof backfillSchema>
