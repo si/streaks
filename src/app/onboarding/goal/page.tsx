@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { FormField } from '@/components/forms/FormField'
-import { goalSchema, type GoalFormData } from '@/lib/validation'
+import { goalSchema, type GoalFormData, type GoalFormInput } from '@/lib/validation'
 import { GoalCategory, LookbackPeriod } from '@prisma/client'
 
 const goalOptions = [
@@ -49,7 +49,7 @@ export default function GoalPage() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const form = useForm<GoalFormData>({
+  const form = useForm<GoalFormInput>({
     resolver: zodResolver(goalSchema),
     defaultValues: {
       goalCategory: undefined,
@@ -58,7 +58,8 @@ export default function GoalPage() {
     },
   })
 
-  const onSubmit = async (data: GoalFormData) => {
+  const onSubmit = async (values: GoalFormInput) => {
+    const data: GoalFormData = goalSchema.parse(values)
     setIsSubmitting(true)
     try {
       const response = await fetch('/api/onboarding/goal', {
@@ -84,7 +85,7 @@ export default function GoalPage() {
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <h2 className="text-xl font-semibold">What's your main goal?</h2>
+        <h2 className="text-xl font-semibold">What&apos;s your main goal?</h2>
         <p className="text-muted-foreground">
           Choose the category that best describes what you want to track
         </p>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { use, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -9,17 +9,18 @@ import { getProvider } from '@/lib/providers'
 import { ProviderId } from '@prisma/client'
 
 interface ConnectPageProps {
-  params: {
+  params: Promise<{
     provider: string
-  }
+  }>
 }
 
 
 export default function ConnectPage({ params }: ConnectPageProps) {
   const router = useRouter()
   const [isConnecting, setIsConnecting] = useState(false)
-  
-  const provider = getProvider(params.provider as ProviderId)
+
+  const { provider: providerParam } = use(params)
+  const provider = getProvider(providerParam as ProviderId)
   
   if (!provider) {
     router.push('/onboarding/services')

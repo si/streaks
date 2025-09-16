@@ -30,7 +30,7 @@ export default async function ServicesPage() {
       <div className="text-center space-y-2">
         <h2 className="text-xl font-semibold">Connect your services</h2>
         <p className="text-muted-foreground">
-          We've picked some services that work well with your {userPreference.goalCategory.toLowerCase()} goal
+          We&apos;ve picked some services that work well with your {userPreference.goalCategory.toLowerCase()} goal
         </p>
       </div>
 

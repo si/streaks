@@ -52,7 +52,7 @@ export default function PreviewPage() {
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <h2 className="text-xl font-semibold">Here's your timeline</h2>
+        <h2 className="text-xl font-semibold">Here&apos;s your timeline</h2>
         <p className="text-muted-foreground">
           This is how your activities will appear - a simple, chronological view of everything you do
         </p>
@@ -78,7 +78,7 @@ export default function PreviewPage() {
 
       <div className="text-center space-y-4">
         <p className="text-sm text-muted-foreground">
-          Your real data will appear here once we've connected your services
+          Your real data will appear here once we&apos;ve connected your services
         </p>
         <Button onClick={handleGoToTimeline} className="w-full">
           Go to timeline
