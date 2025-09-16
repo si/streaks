@@ -49,14 +49,14 @@ export default function GoalPage() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const form = useForm<GoalFormData>({
-    resolver: zodResolver(goalSchema),
-    defaultValues: {
-      goalCategory: undefined,
-      commsOptIn: false,
-      lookbackPeriod: LookbackPeriod.THIS_YEAR,
-    },
-  })
+    const form = useForm<GoalFormData>({
+      resolver: zodResolver(goalSchema) as any,
+      defaultValues: {
+        goalCategory: undefined,
+        commsOptIn: false,
+        lookbackPeriod: LookbackPeriod.THIS_YEAR,
+      },
+    })
 
   const onSubmit = async (data: GoalFormData) => {
     setIsSubmitting(true)
@@ -90,7 +90,7 @@ export default function GoalPage() {
         </p>
       </div>
 
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit as any)} className="space-y-6">
         <FormField name="goalCategory">
           <div className="grid gap-3">
             {goalOptions.map((option) => (
